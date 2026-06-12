@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 interface ServiceCardProps {
   title: string;
   description: string;
-  image: string;
+  image: string | StaticImageData;
   icon: React.ReactNode;
 }
 
