@@ -6,9 +6,9 @@ import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-slate-900 text-white pt-24 pb-12">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20 border-b border-slate-800 pb-20">
+    <footer className="bg-slate-900 text-white pt-16 pb-8 md:pt-24 md:pb-12">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 md:mb-20 border-b border-slate-800 pb-12 md:pb-20">
           {/* Brand Column */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
@@ -49,9 +49,13 @@ export function Footer() {
                 <MapPin className="w-5 h-5 text-secondary shrink-0" />
                 <span className="text-slate-400 text-xs font-medium leading-relaxed">Tehsil Road, Kaphalkhet, Bageshwar, Uttarakhand 263642, India</span>
               </li>
-              <li className="flex items-center gap-4">
-                <Phone className="w-5 h-5 text-secondary shrink-0" />
-                <span className="text-slate-400 text-xs font-medium">+91 00000 00000</span>
+              <li className="flex items-start gap-4">
+                <Phone className="w-5 h-5 text-secondary shrink-0 mt-1" />
+                <div className="flex flex-col gap-1">
+                  <span className="text-slate-400 text-xs font-medium">+91 73029 51299</span>
+                  <span className="text-slate-400 text-xs font-medium">+91 94582 96314</span>
+                  <span className="text-slate-400 text-xs font-medium">+91 70554 13677</span>
+                </div>
               </li>
               <li className="flex items-center gap-4">
                 <Mail className="w-5 h-5 text-secondary shrink-0" />
@@ -77,6 +81,12 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-widest text-slate-500">
           <p>© 2024 Saroj Sushma Hotel. All Professional Rights Reserved.</p>
+          <p>
+            Designed and Developed by{" "}
+            <a href="https://preettech.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-white transition-colors">
+              Preet Tech
+            </a>
+          </p>
           <div className="flex gap-8">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Use</Link>

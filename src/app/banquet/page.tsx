@@ -1,134 +1,162 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
-import { Users, PartyPopper, Calendar, Award } from "lucide-react";
+import { Users, PartyPopper, Briefcase, Heart, Gift, Wine } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import banquetImg from "@/Assets/16.jpeg";
+import heroImg from "@/Assets/22.jpeg";
 
 export default function BanquetPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white">
       <Navbar />
       <Hero 
         title="Grand Celebrations" 
         subtitle="Transforming your special moments into everlasting memories in our elegant hall"
-        image="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=2000"
-        height="h-[60vh]"
+        image={heroImg}
+        height="h-[70vh]"
         ctaText="Plan Your Event"
+        ctaLink="#contact"
       />
 
       {/* Hall Details */}
-      <section className="py-24">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-             <div className="lg:w-1/2 space-y-8">
-                <p className="text-gold font-bold uppercase tracking-[0.2em] text-sm">Elegant Venues</p>
-                <h2 className="font-heading text-4xl font-bold text-foreground leading-tight">The Perfect Setting for Every Occasion</h2>
-                <p className="text-gray-600 leading-relaxed text-lg">
-                  Our banquet hall is one of the largest and most sophisticated venues in Bageshwar. With modern decor, advanced lighting systems, and flexible seating arrangements, we cater to everything from intimate birthday parties to grand weddings and high-profile corporate conferences.
+      <section className="py-16 md:py-24 lg:py-32 overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col lg:flex-row gap-20 items-center">
+             <motion.div 
+               className="lg:w-1/2 space-y-8"
+               initial={{ opacity: 0, x: -50 }}
+               whileInView={{ opacity: 1, x: 0 }}
+               viewport={{ once: true }}
+               transition={{ duration: 0.8 }}
+             >
+                <span className="text-primary/70 font-bold uppercase tracking-[0.3em] text-xs block">Elegant Venues</span>
+                <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 leading-[1.1]">The Perfect Setting for Every Occasion</h2>
+                <p className="text-gray-600 leading-relaxed text-lg font-light">
+                  Our banquet hall is one of the largest and most sophisticated venues in Bageshwar. With modern decor, advanced lighting systems, and flexible seating arrangements, we cater to everything from intimate gatherings to grand weddings and high-profile corporate conferences.
                 </p>
-                <div className="grid grid-cols-2 gap-8 py-4">
-                   <div className="flex flex-col gap-2 p-6 bg-beige/40 rounded-xl">
-                      <Users className="w-8 h-8 text-maroon" />
-                      <h4 className="font-bold text-xl">500+ Guests</h4>
-                      <p className="text-sm text-gray-500">Maximum Capacity</p>
+                
+                <div className="flex flex-col sm:flex-row gap-8 py-6 border-y border-gray-100">
+                   <div className="flex items-center gap-4">
+                      <div className="w-14 h-14 bg-slate-50 rounded-full flex items-center justify-center shrink-0">
+                        <Users className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                         <p className="font-bold text-slate-900">1200+ Guests</p>
+                         <p className="text-sm text-gray-500 font-light">Maximum Capacity</p>
+                      </div>
                    </div>
-                   <div className="flex flex-col gap-2 p-6 bg-beige/40 rounded-xl">
-                      <PartyPopper className="w-8 h-8 text-maroon" />
-                      <h4 className="font-bold text-xl">Custom Decor</h4>
-                      <p className="text-sm text-gray-500">Themed Arrangements</p>
+                   <div className="flex items-center gap-4">
+                      <div className="w-14 h-14 bg-slate-50 rounded-full flex items-center justify-center shrink-0">
+                        <PartyPopper className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                         <p className="font-bold text-slate-900">Custom Decor</p>
+                         <p className="text-sm text-gray-500 font-light">Themed Arrangements</p>
+                      </div>
                    </div>
                 </div>
-                <Button className="bg-maroon hover:bg-maroon/90 text-white rounded-none px-10 py-6">
+                
+                {/* <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-10 py-6 font-bold uppercase tracking-widest text-xs transition-transform hover:scale-105 shadow-xl">
                   Check Availability
-                </Button>
-             </div>
-             <div className="lg:w-1/2 relative">
-                <div className="aspect-[4/3] relative rounded-2xl overflow-hidden shadow-2xl z-10">
-                   <Image src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&q=80&w=1200" alt="Banquet Setup" fill className="object-cover" />
-                </div>
-                <div className="absolute -top-10 -left-10 w-full h-full border-2 border-gold rounded-2xl -z-10" />
-             </div>
+                </Button> */}
+             </motion.div>
+             
+             <motion.div 
+               className="lg:w-1/2 relative h-125 w-full rounded-sm overflow-hidden shadow-2xl group"
+               initial={{ opacity: 0, scale: 0.95 }}
+               whileInView={{ opacity: 1, scale: 1 }}
+               viewport={{ once: true }}
+               transition={{ duration: 0.8 }}
+             >
+                <Image 
+                  src={banquetImg} 
+                  alt="Banquet Setup" 
+                  fill 
+                  sizes="(max-width: 1024px) 100vw, 50vw" 
+                  className="object-cover transition-transform duration-1000 group-hover:scale-105" 
+                />
+                <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500" />
+             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Event Types */}
-      <section className="py-24 bg-maroon text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 space-y-4">
-             <p className="text-gold font-bold uppercase tracking-[0.2em] text-sm">What We Do</p>
-             <h2 className="font-heading text-4xl font-bold">Host Your Perfect Event</h2>
-          </div>
+      <section className="py-16 md:py-24 lg:py-32 bg-primary text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 translate-x-32" />
+        
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <motion.div 
+            className="text-center mb-16 space-y-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+             <span className="text-white/70 font-bold uppercase tracking-[0.3em] text-xs block">What We Do</span>
+             <h2 className="font-heading text-4xl md:text-5xl font-bold">Host Your Perfect Event</h2>
+          </motion.div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
              {[
-               { title: "Weddings", icon: "💍", desc: "Traditional or modern setups with gourmet catering." },
-               { title: "Corporate Events", icon: "💼", desc: "Professional environment with AV support." },
-               { title: "Birthday Parties", icon: "🎂", desc: "Fun-filled themes and delicious cakes." },
-               { title: "Engagement", icon: "🥂", desc: "Intimate and elegant rings ceremonies." },
+               { title: "Weddings", icon: Heart, desc: "Traditional or modern setups with gourmet catering." },
+               { title: "Corporate", icon: Briefcase, desc: "Professional environment with AV support." },
+               { title: "Birthdays", icon: Gift, desc: "Fun-filled themes and delicious catering." },
+               { title: "Celebrations", icon: Wine, desc: "Intimate and elegant engagement or anniversary events." },
              ].map((type, idx) => (
-                <div key={idx} className="p-10 border border-white/10 rounded-2xl hover:bg-white/5 transition-all text-center group">
-                   <span className="text-6xl mb-6 block transform group-hover:scale-110 transition-transform">{type.icon}</span>
-                   <h4 className="font-bold text-xl mb-3">{type.title}</h4>
-                   <p className="text-sm text-white/60 leading-relaxed">{type.desc}</p>
-                </div>
+                <motion.div 
+                  key={idx} 
+                  className="p-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-sm hover:bg-white/10 transition-colors duration-500 text-center group"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                >
+                   <div className="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                     <type.icon className="w-8 h-8 text-white" />
+                   </div>
+                   <h4 className="font-heading font-bold text-xl mb-3 tracking-wide">{type.title}</h4>
+                   <p className="text-sm text-white/70 leading-relaxed font-light">{type.desc}</p>
+                </motion.div>
              ))}
           </div>
         </div>
       </section>
 
-      {/* Capacity Info */}
-      <section className="py-24 bg-beige/10">
-        <div className="container mx-auto px-4">
-           <div className="max-w-4xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden">
-              <div className="bg-gold p-8 text-center">
-                 <h3 className="font-heading text-3xl font-bold text-maroon">Venue Specifications</h3>
-              </div>
-              <div className="p-8 md:p-12 overflow-x-auto">
-                 <table className="w-full text-left">
-                    <thead>
-                       <tr className="border-b-2 border-gray-100">
-                          <th className="py-4 text-maroon font-bold uppercase tracking-widest text-sm">Seating Style</th>
-                          <th className="py-4 text-maroon font-bold uppercase tracking-widest text-sm text-right">Capacity</th>
-                       </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-100">
-                       {[
-                         { style: "Theater Style", cap: "500 Guests" },
-                         { style: "Round Table Dinner", cap: "350 Guests" },
-                         { style: "Cluster Setup", cap: "300 Guests" },
-                         { style: "Formal Boardroom", cap: "100 Guests" },
-                         { style: "Floating Crowd", cap: "700 Guests" },
-                       ].map((row, idx) => (
-                         <tr key={idx} className="hover:bg-gray-50 transition-colors">
-                            <td className="py-6 font-medium">{row.style}</td>
-                            <td className="py-6 text-right font-bold text-gray-700">{row.cap}</td>
-                         </tr>
-                       ))}
-                    </tbody>
-                 </table>
-              </div>
-           </div>
-        </div>
-      </section>
+
 
       {/* Inquiry CTA */}
-      <section className="py-24 text-center">
-         <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto bg-maroon rounded-3xl p-12 text-white space-y-8">
-               <h3 className="font-heading text-4xl font-bold">Ready to Start Planning?</h3>
-               <p className="text-white/70">Connect with our event experts to get a customized quote for your special day.</p>
-               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Button size="lg" className="bg-gold hover:bg-white hover:text-maroon text-maroon font-bold rounded-none px-8">
-                    Contact Event Manager
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-maroon rounded-none px-8">
-                    Download Brochure
-                  </Button>
+      <section id="contact" className="py-16 md:py-24 lg:py-32 bg-white text-center">
+         <div className="container mx-auto px-4 md:px-6">
+            <motion.div 
+              className="max-w-4xl mx-auto bg-primary rounded-sm p-14 md:p-20 text-white shadow-2xl relative overflow-hidden"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+               <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+               <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+               
+               <div className="relative z-10 space-y-8">
+                 <h3 className="font-heading text-4xl md:text-5xl font-bold leading-tight">Ready to Start Planning?</h3>
+                 <p className="text-white/80 font-light text-lg max-w-2xl mx-auto">Connect with our event experts to get a customized quote and arrange a venue tour for your special day.</p>
+                 <div className="flex flex-col sm:flex-row justify-center gap-6 pt-4">
+                    <Button size="lg" className="bg-white hover:bg-slate-100 text-primary font-bold uppercase tracking-widest text-xs rounded-sm px-10 py-7 transition-transform hover:scale-105 shadow-xl">
+                      Contact Event Manager
+                    </Button>
+                    <Button size="lg" className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 uppercase tracking-widest text-xs rounded-sm px-10 py-7 transition-all">
+                      Download Brochure
+                    </Button>
+                 </div>
                </div>
-            </div>
+            </motion.div>
          </div>
       </section>
 

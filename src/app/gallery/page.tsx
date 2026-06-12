@@ -4,19 +4,40 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { GalleryGrid } from "@/components/GalleryGrid";
 
+import img7 from "@/Assets/7.jpeg";
+import img8 from "@/Assets/8.jpeg";
+import img9 from "@/Assets/9.jpeg";
+import img10 from "@/Assets/10.jpeg";
+import img11 from "@/Assets/11.jpeg";
+import img12 from "@/Assets/12.jpeg";
+import img13 from "@/Assets/13.jpeg";
+import img14 from "@/Assets/14.jpeg";
+import img15 from "@/Assets/15.jpeg";
+import img16 from "@/Assets/16.jpeg";
+import img17 from "@/Assets/17.jpeg";
+import img18 from "@/Assets/18.jpeg";
+import img19 from "@/Assets/19.jpeg";
+import img20 from "@/Assets/20.jpeg";
+import img21 from "@/Assets/21.jpeg";
+import img22 from "@/Assets/22.jpeg";
+
 const allPhotos = [
-  { src: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=800", category: "Exterior", title: "Main Building" },
-  { src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800", category: "Exterior", title: "Lobby" },
-  { src: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=800", category: "Rooms", title: "Super Deluxe Room" },
-  { src: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&q=80&w=800", category: "Rooms", title: "Himalayan View Room" },
-  { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=800", category: "Rooms", title: "Master Suite" },
-  { src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800", category: "Restaurant", title: "Main Dining Hall" },
-  { src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=800", category: "Restaurant", title: "Bakery Section" },
-  { src: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&q=80&w=800", category: "Restaurant", title: "Outdoor Seating" },
-  { src: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=800", category: "Banquet", title: "Wedding Hall" },
-  { src: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&q=80&w=800", category: "Banquet", title: "Conference Setup" },
-  { src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=800", category: "Exterior", title: "Valley View" },
-  { src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&q=80&w=800", category: "Exterior", title: "Night View" },
+  { src: img7 },
+  { src: img8 },
+  { src: img9 },
+  { src: img10 },
+  { src: img11 },
+  { src: img12 },
+  { src: img13 },
+  { src: img14 },
+  { src: img15 },
+  { src: img16 },
+  { src: img17 },
+  { src: img18 },
+  { src: img19 },
+  { src: img20 },
+  { src: img21 },
+  { src: img22 },
 ];
 
 export default function GalleryPage() {
@@ -26,12 +47,12 @@ export default function GalleryPage() {
       <Hero 
         title="Visual Journey" 
         subtitle="Explore the elegance and beauty of Saroj Sushma through our lens"
-        image="https://images.unsplash.com/photo-1493397212122-2b85def0047b?auto=format&fit=crop&q=80&w=2000"
+        image={img9}
         height="h-[50vh]"
       />
 
-      <section className="py-24">
-        <div className="container mx-auto px-4">
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16 space-y-4">
             <p className="text-gold font-bold uppercase tracking-[0.2em] text-sm">Our Gallery</p>
             <h2 className="font-heading text-4xl font-bold text-foreground">Captured Moments</h2>

@@ -33,6 +33,10 @@
   --color-ring: var(--ring);
 
   --radius: 0rem; /* Modern sharp look */
+  
+  --z-60: 60;
+  --z-70: 70;
+  --z-100: 100;
 }
 
 :root {

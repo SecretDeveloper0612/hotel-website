@@ -2,7 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 interface ServiceCardProps {
   title: string;
@@ -13,26 +14,42 @@ interface ServiceCardProps {
 
 export function ServiceCard({ title, description, image, icon }: ServiceCardProps) {
   return (
-    <div className="group relative bg-white border border-slate-100 flex flex-col md:flex-row h-auto md:h-[300px]">
-      <div className="w-full md:w-1/2 relative h-[250px] md:h-full overflow-hidden">
-        <Image 
-          src={image} 
-          alt={title} 
-          fill 
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-      </div>
+    <div className="group relative overflow-hidden h-100 w-full rounded-sm cursor-pointer shadow-lg">
+      <Image 
+        src={image} 
+        alt={title} 
+        fill 
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        className="object-cover transition-transform duration-1000 group-hover:scale-110"
+      />
+      <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
       
-      <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-white group-hover:bg-slate-50 transition-colors duration-500">
-        <div className="mb-6 opacity-40 group-hover:opacity-100 transition-opacity">
-          {icon}
+      {/* Overlay that covers the whole card on hover - reduced opacity from 95% to 80% */}
+      <div className="absolute inset-0 bg-[#2A3B39]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      
+      <div className="absolute inset-0 p-8 flex flex-col justify-end z-10">
+        <div className="transform transition-all duration-500 group-hover:-translate-y-2">
+          <div className="text-white/80 mb-4 bg-white/10 w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20 transition-transform duration-500 group-hover:scale-90 origin-left">
+            {icon}
+          </div>
+          <h3 className="font-heading text-3xl font-bold text-white mb-2 leading-tight">
+              {title}
+          </h3>
+          
+          {/* Hover State Content - using grid trick to animate height smoothly */}
+          <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
+            <div className="overflow-hidden">
+              <div className="pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                <p className="text-white/80 text-sm leading-relaxed font-light mb-6">
+                  {description}
+                </p>
+                <Link href="#" className="inline-flex items-center gap-2 text-white text-xs font-bold uppercase tracking-widest hover:gap-4 transition-all">
+                  Explore Service <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-        <h3 className="font-heading text-2xl font-bold mb-4 text-primary">
-            {title}
-        </h3>
-        <p className="text-slate-500 text-sm leading-relaxed font-light">
-          {description}
-        </p>
       </div>
     </div>
   );

@@ -18,8 +18,8 @@ export default function ContactPage() {
         height="h-[50vh]"
       />
 
-      <section className="py-24">
-        <div className="container mx-auto px-4">
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             {/* Contact Info */}
             <div className="space-y-12">
@@ -46,8 +46,9 @@ export default function ContactPage() {
                         </div>
                         <div>
                            <h4 className="font-bold text-lg">Phone</h4>
-                           <p className="text-sm text-gray-500">+91 00000 00000</p>
-                           <p className="text-sm text-gray-500">+91 11111 11111</p>
+                           <p className="text-sm text-gray-500">+91 73029 51299</p>
+                           <p className="text-sm text-gray-500">+91 94582 96314</p>
+                           <p className="text-sm text-gray-500">+91 70554 13677</p>
                         </div>
                      </div>
                   </div>
@@ -105,7 +106,7 @@ export default function ContactPage() {
                      </div>
                      <div className="space-y-2">
                         <label className="text-sm font-bold text-gray-700">Phone Number</label>
-                        <Input placeholder="+91 00000 00000" className="bg-gray-50 border-none rounded-none focus-visible:ring-gold" />
+                        <Input placeholder="+91 73029 51299" className="bg-gray-50 border-none rounded-none focus-visible:ring-gold" />
                      </div>
                   </div>
                   <div className="space-y-2">
