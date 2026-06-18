@@ -16,6 +16,7 @@ import img7 from "@/Assets/7.jpeg";
 import img12 from "@/Assets/12.jpeg";
 import img20 from "@/Assets/20.jpeg";
 import img16 from "@/Assets/16.jpeg";
+import img19 from "@/Assets/19.jpeg";
 
 import { Button } from "@/components/ui/button";
 import { 
@@ -224,7 +225,7 @@ export default function HomePage() {
            style={{ y: parallaxY }}
          >
            <Image 
-             src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=2000"
+             src={img19}
              alt="Luxury Hotel"
              fill
              sizes="100vw"
@@ -247,11 +248,11 @@ export default function HomePage() {
                 Providing Exceptional Hospitality for Over 15 Years.
               </h2>
               <div className="flex flex-col sm:flex-row justify-center gap-6">
-                  <Button className="bg-white text-[#2A3B39] hover:bg-slate-100 font-bold px-12 py-8 rounded-sm uppercase tracking-widest text-xs transition-all hover:scale-105 shadow-xl">
-                      Quick Booking
+                  <Button asChild className="bg-white text-[#2A3B39] hover:bg-slate-100 font-bold px-12 py-8 rounded-sm uppercase tracking-widest text-xs transition-all hover:scale-105 shadow-xl">
+                      <a href="tel:+917302951299">Quick Booking</a>
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#2A3B39] px-12 py-8 rounded-sm font-bold uppercase tracking-widest text-xs transition-all hover:scale-105 bg-transparent backdrop-blur-sm">
-                      Contact Us
+                  <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-[#2A3B39] px-12 py-8 rounded-sm font-bold uppercase tracking-widest text-xs transition-all hover:scale-105 bg-transparent backdrop-blur-sm">
+                      <Link href="/contact">Contact Us</Link>
                   </Button>
               </div>
             </motion.div>

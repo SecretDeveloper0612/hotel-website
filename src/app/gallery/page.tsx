@@ -20,6 +20,11 @@ import img19 from "@/Assets/19.jpeg";
 import img20 from "@/Assets/20.jpeg";
 import img21 from "@/Assets/21.jpeg";
 import img22 from "@/Assets/22.jpeg";
+import img23 from "@/Assets/23.jpeg";
+import img24 from "@/Assets/24.jpeg";
+import img25 from "@/Assets/25.jpeg";
+import img26 from "@/Assets/26.jpeg";
+import img27 from "@/Assets/27.jpeg";
 
 const allPhotos = [
   { src: img7 },
@@ -38,6 +43,11 @@ const allPhotos = [
   { src: img20 },
   { src: img21 },
   { src: img22 },
+  { src: img23 },
+  { src: img24 },
+  { src: img25 },
+  { src: img26 },
+  { src: img27 },
 ];
 
 export default function GalleryPage() {

@@ -1,13 +1,12 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import { Users, Maximize2, ArrowRight } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import Image, { StaticImageData } from "next/image";
+import { ArrowRight } from "lucide-react";
 
 interface RoomCardProps {
   name: string;
-  image: string | any;
+  image: string | StaticImageData;
   description: string;
   amenities: string[];
 }

@@ -96,6 +96,7 @@ export function Navbar() {
               );
             })}
             <Button 
+              asChild
               className={cn(
                 "rounded-none px-8 py-6 h-auto font-bold text-xs uppercase tracking-widest ml-4 transition-all duration-500 hover:scale-105",
                 scrolled 
@@ -103,7 +104,7 @@ export function Navbar() {
                   : "bg-white hover:bg-white/90 text-primary"
               )}
             >
-              Quick Booking
+              <a href="tel:+917302951299">Quick Booking</a>
             </Button>
           </div>
 

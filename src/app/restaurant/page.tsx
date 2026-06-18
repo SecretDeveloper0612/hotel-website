@@ -56,7 +56,7 @@ export default function RestaurantPage() {
                  transition={{ duration: 0.6, delay: 0.3 }}
                >
                   <Star className="text-white w-8 h-8 md:w-12 md:h-12 mb-2 md:mb-3 fill-white" />
-                  <p className="font-bold text-white/90 uppercase tracking-[0.1em] md:tracking-[0.2em] text-[10px] md:text-xs mb-1">Rated #1 in</p>
+                  <p className="font-bold text-white/90 uppercase tracking-widest md:tracking-[0.2em] text-[10px] md:text-xs mb-1">Rated #1 in</p>
                   <p className="font-heading text-lg md:text-xl font-bold text-white leading-tight">Bageshwar Dining</p>
                </motion.div>
             </motion.div>

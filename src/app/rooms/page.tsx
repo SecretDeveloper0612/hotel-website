@@ -18,10 +18,8 @@ import {
 } from "lucide-react";
 
 import img1 from "@/Assets/1.jpeg";
-import img2 from "@/Assets/2.jpeg";
 import img3 from "@/Assets/3.jpeg";
 import img4 from "@/Assets/4.jpeg";
-import img5 from "@/Assets/5.jpeg";
 import img6 from "@/Assets/6.jpeg";
 
 const rooms = [
