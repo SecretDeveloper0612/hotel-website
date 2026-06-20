@@ -48,6 +48,12 @@ const allPhotos = [
   { src: img25 },
   { src: img26 },
   { src: img27 },
+  { src: "/images/WhatsApp Image 2026-06-18 at 16.52.21.jpeg" },
+  { src: "/images/WhatsApp Image 2026-06-18 at 16.52.22.jpeg" },
+  { src: "/images/WhatsApp Image 2026-06-18 at 16.52.49.jpeg" },
+  { src: "/images/WhatsApp Image 2026-06-18 at 16.52.50 (2).jpeg" },
+  { src: "/images/WhatsApp Image 2026-06-18 at 16.52.50.jpeg" },
+  { src: "/images/WhatsApp Image 2026-06-18 at 16.58.34.jpeg" },
 ];
 
 export default function GalleryPage() {

@@ -14,6 +14,7 @@ import img3 from "@/Assets/3.jpeg";
 import img6 from "@/Assets/6.jpeg";
 import img7 from "@/Assets/7.jpeg";
 import img12 from "@/Assets/12.jpeg";
+import img14 from "@/Assets/14.jpeg";
 import img20 from "@/Assets/20.jpeg";
 import img16 from "@/Assets/16.jpeg";
 import img19 from "@/Assets/19.jpeg";
@@ -44,7 +45,7 @@ export default function HomePage() {
     {
       title: "Signature Dining",
       description: "Experience the finest local and international cuisines prepared by our expert chefs.",
-      image: img12,
+      image: img14,
       icon: <Utensils className="w-8 h-8 text-primary" />
     },
     {
@@ -142,11 +143,11 @@ export default function HomePage() {
                 
                 <div className="grid grid-cols-2 gap-8 py-8 border-y border-slate-200 mb-8">
                    <div className="space-y-2">
-                      <p className="font-heading text-4xl text-[#2A3B39] font-bold">150+</p>
+                      <p className="font-heading text-4xl text-[#2A3B39] font-bold">6+</p>
                       <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Premium Rooms</p>
                    </div>
                    <div className="space-y-2">
-                      <p className="font-heading text-4xl text-[#2A3B39] font-bold">15</p>
+                      <p className="font-heading text-4xl text-[#2A3B39] font-bold">10</p>
                       <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Years of Excellence</p>
                    </div>
                 </div>

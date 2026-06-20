@@ -9,14 +9,7 @@ import { Utensils, Clock, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-const menuItems = [
-  { name: "Kumaoni Thali", desc: "Authentic local flavors including Bhatt ki Churkani, Gahat Dal, and Mandua Roti.", price: "₹450" },
-  { name: "Paneer Butter Masala", desc: "Creamy paneer cooked in a rich tomato and butter gravy.", price: "₹350" },
-  { name: "Mountain Herbs Chicken", desc: "Tender chicken marinated with local mountain herbs and spices.", price: "₹480" },
-  { name: "Veg Hakka Noodles", desc: "Classic stir-fried noodles with fresh garden vegetables.", price: "₹280" },
-  { name: "Gulab Jamun", desc: "Soft, syrup-soaked milk balls - a classic Indian dessert.", price: "₹120" },
-  { name: "Cold Coffee with Ice Cream", desc: "Refreshing blended coffee topped with vanilla scoops.", price: "₹180" },
-];
+
 
 export default function RestaurantPage() {
   return (
@@ -121,22 +114,23 @@ export default function RestaurantPage() {
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900">Menu Highlights</h2>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12 max-w-5xl mx-auto">
-            {menuItems.map((item, idx) => (
-              <motion.div 
-                key={idx} 
-                className="flex flex-col group"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-              >
-                <div className="space-y-2">
-                  <h4 className="font-heading font-bold text-xl text-slate-900 group-hover:text-primary transition-colors">{item.name}</h4>
-                  <p className="text-sm text-gray-500 font-light leading-relaxed">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+          <div className="max-w-4xl mx-auto flex justify-center mt-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="w-full relative rounded-xl overflow-hidden shadow-2xl border-4 border-slate-100"
+            >
+              <Image 
+                src="/images/WhatsApp Image 2026-06-18 at 16.52.07.jpeg" 
+                alt="Hotel Saroj Sushma Menu" 
+                width={1200}
+                height={1600}
+                className="w-full h-auto object-contain"
+                unoptimized
+              />
+            </motion.div>
           </div>
           
 
@@ -166,7 +160,7 @@ export default function RestaurantPage() {
                 transition={{ duration: 0.6 }}
               >
                 <Image 
-                  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200" 
+                  src="/images/WhatsApp Image 2026-06-18 at 16.52.17.jpeg" 
                   alt="Restaurant main view" 
                   fill 
                   sizes="(max-width: 768px) 100vw, 66vw" 
@@ -183,7 +177,7 @@ export default function RestaurantPage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <Image 
-                  src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800" 
+                  src="/images/WhatsApp Image 2026-06-18 at 16.52.50 (1).jpeg" 
                   alt="Restaurant details" 
                   fill 
                   sizes="(max-width: 768px) 100vw, 33vw" 
@@ -200,7 +194,7 @@ export default function RestaurantPage() {
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <Image 
-                  src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800" 
+                  src="/images/WhatsApp Image 2026-06-18 at 16.52.16.jpeg" 
                   alt="Dining experience" 
                   fill 
                   sizes="(max-width: 768px) 100vw, 33vw" 
